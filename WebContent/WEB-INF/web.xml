@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+   version="2.5"> 
+   
+   <servlet>  <!-- 注册Servlet -->
+   	<description>Test 可省略</description>
+   	<display-name>Test 可省略</display-name>
+   	<servlet-name>ServletDemo1</servlet-name>  <!-- 注册名称 -->
+   	<servlet-class>com.test.servlet.ServletDemo1</servlet-class>
+   </servlet>
+   <servlet-mapping>  <!-- 映射一个已注册的Servlet的一个对外访问路径 -->
+   	<servlet-name>ServletDemo1</servlet-name>
+   	<url-pattern>/servlet/1</url-pattern>
+   </servlet-mapping>
+   <servlet-mapping>  <!-- 映射一个已注册的Servlet的一个对外访问路径 -->
+   	<servlet-name>ServletDemo1</servlet-name>
+   	<url-pattern>/servlet/2</url-pattern>
+   </servlet-mapping>
+</web-app>
