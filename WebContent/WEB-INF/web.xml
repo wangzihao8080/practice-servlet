@@ -12,10 +12,26 @@
    </servlet>
    <servlet-mapping>  <!-- 映射一个已注册的Servlet的一个对外访问路径 -->
    	<servlet-name>ServletDemo1</servlet-name>
-   	<url-pattern>/servlet/1</url-pattern>
+   	<url-pattern>/1</url-pattern>
    </servlet-mapping>
    <servlet-mapping>  <!-- 映射一个已注册的Servlet的一个对外访问路径 -->
    	<servlet-name>ServletDemo1</servlet-name>
-   	<url-pattern>/servlet/2</url-pattern>
+   	<url-pattern>*.do</url-pattern>
    </servlet-mapping>
+   
+   <servlet>
+    <servlet-name>ServletDemo2</servlet-name>
+    <servlet-class>com.test.servlet.ServletDemo2</servlet-class>
+    <!--配置ServletConfigDemo1的初始化参数 -->
+    <init-param>
+        <param-name>name</param-name>
+        <param-value>张三</param-value>
+    </init-param>
+     <init-param>
+        <param-name>password</param-name>
+        <param-value>123</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+</servlet>
+   
 </web-app>
